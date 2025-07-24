@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogPage</title>
+</head>
+<body>
+    {% include 'commons/header.html' %}
+    <h1>Welcome to the Blogs Project!</h1>
+    <!-- {{objects}} -->
+     <!-- <QuerySet [<Blog: Musk’s Starlink bids for internet in Nepal.>, <Blog: Best Internet Service Providers (ISP) in Nepal 2025>]> -->
+    
+    {% for i in objects %}
+       <p>{{forloop.counter}}{{i.title}}</p>
+    {% endfor %}
+
+    </body>
+</html>
